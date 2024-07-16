@@ -1,0 +1,44 @@
+{
+  "name": "@techlution/document-tracer",
+  "version": "0.0.1",
+  "description": "Document Chaser SDK for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "engine": {
+    "node": "^20.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techlution-service/document-chaser.git"
+  },
+  "keywords": [
+    "techlution",
+    "service",
+    "techlution service",
+    "document",
+    "chaser",
+    "document chaser"
+  ],
+  "author": "Calvin@Techlution",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/techlution-service/document-chaser/issues"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./error": "./lib/DocumentChaserError/index.js",
+    "./request": "./lib/DocumentChaserRequest/index.js",
+    "./response": "./lib/DocumentChaserResponse.js"
+  },
+  "homepage": "https://github.com/techlution-service/document-chaser#readme",
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
+}
