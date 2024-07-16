@@ -1,23 +1,22 @@
-import { inspect } from 'util';
-import DocumentChaser, {
-  DocumentChaserConfig,
-  DocumentChaserRequests,
-} from '@techlution/document-chaser';
+import DocumentTracer, {
+  DocumentTracerConfig,
+  DocumentTracerRequests,
+} from '@techlution/document-tracer';
 
 const {
   CreateApplicationRequest,
   UpdateApplicationRequest,
   DeleteApplicationRequest,
   TEMPLATE_TYPE,
-} = DocumentChaserRequests;
+} = DocumentTracerRequests;
 
-const config = new DocumentChaserConfig({
+const config = new DocumentTracerConfig({
   key: '<insert your key here>',
 });
 
 console.debug({ config });
 
-const chaser = new DocumentChaser(config);
+const chaser = new DocumentTracer(config);
 
 console.debug({ chaser });
 
@@ -55,14 +54,14 @@ const update = () => new UpdateApplicationRequest({
 const updateResult = await chaser
   .update(update());
 
-const updateChaser = new DocumentChaser(config);
+const updateTracer = new DocumentTracer(config);
 
-const newUpdateResult = await updateChaser
+const newUpdateResult = await updateTracer
   .application(chaser.applicationId)
   .update(update());
 
 console.debug({
-  updateResult, newUpdateResult, chaser, updateChaser,
+  updateResult, newUpdateResult, chaser, updateTracer,
 });
 
 const deleteRequest = new DeleteApplicationRequest();
