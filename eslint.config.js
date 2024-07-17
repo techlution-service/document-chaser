@@ -21,12 +21,12 @@ export default [
       'max-depth': ['warn', 3],
       'max-len': 'warn',
       'max-lines': ['error', {
-        max: 150,
+        max: 100,
         skipBlankLines: true,
         skipComments: true,
       }],
       'max-lines-per-function': ['error', {
-        max: 100,
+        max: 50,
         skipBlankLines: true,
         skipComments: true,
       }],

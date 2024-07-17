@@ -16,9 +16,9 @@ const config = new DocumentTracerConfig({
 
 console.debug({ config });
 
-const chaser = new DocumentTracer(config);
+const tracer = new DocumentTracer(config);
 
-console.debug({ chaser });
+console.debug({ tracer });
 
 const create = new CreateApplicationRequest({
   externalId: `${(new Date()).getTime()}`,
@@ -32,13 +32,13 @@ const create = new CreateApplicationRequest({
   amEmail: 'am@example.com',
 });
 
-console.debug({ chaser });
+console.debug({ tracer });
 
-const createResult = await chaser
+const createResult = await tracer
   .application()
   .create(create);
 
-console.debug({ chaser, createResult });
+console.debug({ tracer, createResult });
 
 const update = () => new UpdateApplicationRequest({
   merchantName: 'Update Merchant',
@@ -51,23 +51,23 @@ const update = () => new UpdateApplicationRequest({
   amEmail: 'am-update@example.com',
 });
 
-const updateResult = await chaser
+const updateResult = await tracer
   .update(update());
 
 const updateTracer = new DocumentTracer(config);
 
 const newUpdateResult = await updateTracer
-  .application(chaser.applicationId)
+  .application(tracer.applicationId)
   .update(update());
 
 console.debug({
-  updateResult, newUpdateResult, chaser, updateTracer,
+  updateResult, newUpdateResult, tracer, updateTracer,
 });
 
 const deleteRequest = new DeleteApplicationRequest();
-console.debug({ chaser });
+console.debug({ tracer });
 
-const deleteResult = await chaser
+const deleteResult = await tracer
   .delete(deleteRequest);
 
-console.debug({ deleteResult, chaser });
+console.debug({ deleteResult, tracer });
