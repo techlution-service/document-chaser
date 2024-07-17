@@ -27,6 +27,7 @@ All methods return `this`, i.e. they are chainable
 | update | `update(input: Object | DocumentTracerRequest)` | Set the action to update and parse the input with `UpdateApplicationRequest` |
 | delete | `delete(input?: Object | DocumentTracerRequest)` | Set the action to delete and parse the input with `DeleteApplicationRequest` |
 | orFail | `orFail()` | Activate Error throwing after Request, no Error will be thrown by default but stored in `error` |
+| verify | `verify(payload: Object)` | Verifying payload from webhook API |
 
 #### DocumentTracerConfig.js
 The structure for configuring and validating config to be provided to `DocumentTracer.js`.

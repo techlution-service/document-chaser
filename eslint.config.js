@@ -12,7 +12,20 @@ export default [
     extends: [
       'airbnb-base',
     ],
+    plugins: ['@stylistic'],
     rules: {
+      'lines-between-class-members': 'off',
+      '@stylistic/lines-between-class-members': [
+        'error',
+        {
+          enforce: [
+            { blankLine: 'always', prev: '*', next: 'method' },
+            { blankLine: 'always', prev: 'method', next: '*' },
+            { blankLine: 'never', prev: 'field', next: 'field' },
+          ],
+        },
+        { exceptAfterSingleLine: true },
+      ],
       camelcase: 'error',
       complexity: ['warn', 5],
       'import/extensions': 'off',
