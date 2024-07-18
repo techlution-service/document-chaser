@@ -2,7 +2,7 @@
 This library provides API integration aid for Document Tracer, an automated notification service.
 
 ## Set Up
-1. Install this library [Reference](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)
+1. Install this library ([Reference: Github - working with a github packages registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package))
 
 Setup `.npmrc` in your repository
 ```bash
