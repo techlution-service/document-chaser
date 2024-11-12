@@ -1,6 +1,6 @@
 {
   "name": "@techlution-service/document-tracer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Document Chaser SDK for NodeJS",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "./request": "./lib/DocumentChaserRequest/index.js",
     "./response": "./lib/DocumentChaserResponse.js"
   },
+  "types": "./lib/index.d.ts",
   "homepage": "https://github.com/techlution-service/document-chaser#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
