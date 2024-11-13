@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.0.4
+
+### Patch Changes
+
+- Core: Update format url setter
+
 ## 2.0.3
 
 ### Patch Changes
