@@ -1,4 +1,4 @@
-import { DocumentTracerError } from './DocumentTracerError/index.d.ts';
+import type { DocumentTracerError } from './DocumentTracerError/index.d.ts';
 
 export interface DocumentTracerResult {
   _id: string;
@@ -16,6 +16,7 @@ export class DocumentTracerResponse {
 
   get applicationId(): string;
   get id(): string;
+  get _id(): string;
   get success(): boolean;
   get error(): DocumentTracerError[] | DocumentTracerError;
   get data(): DocumentTracerResult;

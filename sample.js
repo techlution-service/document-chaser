@@ -1,7 +1,7 @@
 import DocumentTracer, {
   DocumentTracerConfig,
   DocumentTracerRequests,
-} from '@techlution/document-tracer';
+} from '@techlution-service/document-tracer';
 
 const {
   CreateApplicationRequest,

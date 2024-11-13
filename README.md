@@ -33,9 +33,9 @@ All methods return `this`, i.e. they are chainable
 | Method | signature |  Details |
 |---|---|---|
 | application | `application(id?: String)` | Set the resource to 'application', and 'id' if provided, must be set before executing other actions |
-| create | `create(input: Object | DocumentTracerRequest)` | Set the action to create and parse the input with `CreateApplicationRequest` |
-| update | `update(input: Object | DocumentTracerRequest)` | Set the action to update and parse the input with `UpdateApplicationRequest` |
-| delete | `delete(input?: Object | DocumentTracerRequest)` | Set the action to delete and parse the input with `DeleteApplicationRequest` |
+| create | `create(input: Object \| DocumentTracerRequest)` | Set the action to create and parse the input with `CreateApplicationRequest` |
+| update | `update(input: Object \| DocumentTracerRequest)` | Set the action to update and parse the input with `UpdateApplicationRequest` |
+| delete | `delete(input?: Object \| DocumentTracerRequest)` | Set the action to delete and parse the input with `DeleteApplicationRequest` |
 | orFail | `orFail()` | Activate Error throwing after Request, no Error will be thrown by default but stored in `error` |
 | verify | `verify(payload: Object)` | Verifying payload from webhook API |
 
