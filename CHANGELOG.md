@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.0.3
+
+### Patch Changes
+
+- Chore - refactor DocumentTracer main class
+
 ## 2.0.2
 
 ### Patch Changes
