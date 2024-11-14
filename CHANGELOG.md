@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.2.1
+
+### Patch Changes
+
+- Type: add then function to Document Tracer class
+
 ## 2.2.0
 
 ### Minor Changes

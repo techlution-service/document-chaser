@@ -60,6 +60,7 @@ export default class DocumentTracer {
     get config(): string;
     /** @type {?string} */
     get request(): string;
+    /** @function then */
     then(resolve: any, reject: any): Promise<any>;
     #private;
 }
