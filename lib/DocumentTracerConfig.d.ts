@@ -5,7 +5,7 @@ export interface DocumentTracerConfigInput {
   env: string;
 }
 
-export class DocumentTracerConfig {
+export default class DocumentTracerConfig {
   constructor(input: DocumentTracerConfigInput);
 
   static validate(input: {

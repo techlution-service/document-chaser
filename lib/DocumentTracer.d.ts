@@ -7,7 +7,7 @@ import type {
 } from './DocumentTracerRequest/index.d.ts';
 
 
-export class DocumentTracer {
+export default class DocumentTracer {
   constructor(config: DocumentTracerConfig);
   application(id: string): this;
   orFail(): this;

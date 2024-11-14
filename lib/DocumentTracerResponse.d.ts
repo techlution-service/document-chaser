@@ -7,7 +7,7 @@ export interface DocumentTracerResult {
   }
 }
 
-export class DocumentTracerResponse {
+export default class DocumentTracerResponse {
   constructor(input: DocumentTracerResult, isCreate: boolean);
 
   parseError(errors: DocumentTracerError[]): void;

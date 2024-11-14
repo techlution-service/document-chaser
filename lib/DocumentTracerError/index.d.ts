@@ -1,4 +1,4 @@
-export class DocumentTracerError extends Error {
+export default class DocumentTracerError extends Error {
   constructor(code: string, message: string, detail?: any);
 
   code: string;

@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.1.1
+
+### Patch Changes
+
+- Types: update type exports
+
 ## 2.1.0
 
 ### Minor Changes
