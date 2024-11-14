@@ -22,22 +22,15 @@ export class DocumentTracerErrorSet extends DocumentTracerError {
 }
 
 
-export class AuthenticationRequired extends DocumentTracerError {
-  constructor();
-}
+export class AuthenticationRequired extends DocumentTracerError {}
 
-export class UpdateAuthenticationRequired extends DocumentTracerError {
-  constructor();
-}
+export class UpdateAuthenticationRequired extends DocumentTracerError {}
 
-export class MalformedApplicationIdentifier extends DocumentTracerError {
-  constructor();
-}
+export class MalformedApplicationIdentifier extends DocumentTracerError {}
 
+export class RecordAlreadyExists extends DocumentTracerError {}
 
-export class RecordNotFound extends DocumentTracerError {
-  constructor();
-}
+export class RecordNotFound extends DocumentTracerError {}
 
 export class ValidationError extends DocumentTracerError {
   constructor(detail: any);

@@ -54,6 +54,7 @@ export default [
       '.env',
       '.env.*',
       '!.env.example',
+      'sample.js',
     ],
   },
 ];

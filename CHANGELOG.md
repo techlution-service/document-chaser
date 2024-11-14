@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.1.0
+
+### Minor Changes
+
+- Error: add RecordAlreadyExists Error for Create Application Request
+
 ## 2.0.4
 
 ### Patch Changes

@@ -8,11 +8,11 @@ export interface DocumentTracerResult {
 }
 
 export class DocumentTracerResponse {
-  constructor(input: DocumentTracerResult);
+  constructor(input: DocumentTracerResult, isCreate: boolean);
 
   parseError(errors: DocumentTracerError[]): void;
 
-  static handleResponse(input: DocumentTracerResult | Promise<DocumentTracerResult>): Promise<DocumentTracerResponse>;
+  static handleResponse(input: DocumentTracerResult | Promise<DocumentTracerResult>, isCreate: boolean): Promise<DocumentTracerResponse>;
 
   get applicationId(): string;
   get id(): string;
