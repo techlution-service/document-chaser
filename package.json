@@ -1,6 +1,6 @@
 {
   "name": "@techlution-service/document-tracer",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Document Chaser SDK for NodeJS",
   "main": "index.js",
   "scripts": {
@@ -28,12 +28,12 @@
     "url": "https://github.com/techlution-service/document-chaser/issues"
   },
   "exports": {
-    ".": "./lib/index.js",
-    "./error": "./lib/DocumentChaserError/index.js",
-    "./request": "./lib/DocumentChaserRequest/index.js",
-    "./response": "./lib/DocumentChaserResponse.js"
+    ".": "./dist/index.js",
+    "./error": "./dist/DocumentChaserError/index.js",
+    "./request": "./dist/DocumentChaserRequest/index.js",
+    "./response": "./dist/DocumentChaserResponse.js"
   },
-  "types": "./lib/index.d.ts",
+  "types": "./dist/index.d.ts",
   "homepage": "https://github.com/techlution-service/document-chaser#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
@@ -42,6 +42,7 @@
     "@stylistic/eslint-plugin": "^2.3.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.1"
+    "eslint-plugin-import": "^2.29.1",
+    "typescript": "^5.6.3"
   }
 }
