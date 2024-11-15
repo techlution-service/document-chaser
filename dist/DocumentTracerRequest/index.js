@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TEMPLATE_TYPE = exports.UAR = exports.UpdateApplicationRequest = exports.DocumentTracerRequest = exports.DAR = exports.DeleteApplicationRequest = exports.CAR = exports.CreateApplicationRequest = void 0;
+var CreateApplicationRequest_js_1 = require("./CreateApplicationRequest.js");
+exports.CreateApplicationRequest = CreateApplicationRequest_js_1.default;
+exports.CAR = CreateApplicationRequest_js_1.default;
+var DeleteApplicationRequest_js_1 = require("./DeleteApplicationRequest.js");
+exports.DeleteApplicationRequest = DeleteApplicationRequest_js_1.default;
+exports.DAR = DeleteApplicationRequest_js_1.default;
+var DocumentTracerRequest_js_1 = require("./DocumentTracerRequest.js");
+exports.DocumentTracerRequest = DocumentTracerRequest_js_1.default;
+Object.defineProperty(exports, "TEMPLATE_TYPE", { enumerable: true, get: function () { return DocumentTracerRequest_js_1.TEMPLATE_TYPE; } });
+var UpdateApplicationRequest_js_1 = require("./UpdateApplicationRequest.js");
+exports.UpdateApplicationRequest = UpdateApplicationRequest_js_1.default;
+exports.UAR = UpdateApplicationRequest_js_1.default;

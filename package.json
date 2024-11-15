@@ -1,6 +1,6 @@
 {
   "name": "@techlution-service/document-tracer",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Document Chaser SDK for NodeJS",
   "main": "index.js",
   "scripts": {
@@ -29,10 +29,10 @@
     "url": "https://github.com/techlution-service/document-chaser/issues"
   },
   "exports": {
-    ".": "./lib/index.js",
-    "./error": "./lib/DocumentChaserError/index.js",
-    "./request": "./lib/DocumentChaserRequest/index.js",
-    "./response": "./lib/DocumentChaserResponse.js"
+    ".": "./dist/index.js",
+    "./error": "./dist/DocumentChaserError/index.js",
+    "./request": "./dist/DocumentChaserRequest/index.js",
+    "./response": "./dist/DocumentChaserResponse.js"
   },
   "types": "./dist/index.d.ts",
   "homepage": "https://github.com/techlution-service/document-chaser#readme",

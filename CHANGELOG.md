@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.2.4
+
+### Patch Changes
+
+- Types: fix export with js
+
 ## 2.2.3
 
 ### Patch Changes
