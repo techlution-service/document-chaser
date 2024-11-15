@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.2.5
+
+### Patch Changes
+
+- Package: update main script
+
 ## 2.2.4
 
 ### Patch Changes
