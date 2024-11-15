@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.2.3
+
+### Patch Changes
+
+- Export: fix package json
+
 ## 2.2.2
 
 ### Patch Changes
