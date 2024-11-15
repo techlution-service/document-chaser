@@ -2,8 +2,8 @@
  * @typedef {Object} DocumentTracerConfigInput
  * @property {string} key
  * @property {string} secret
- * @property {string} [domain]
- * @property {string} [env]
+ * @property {?string} domain
+ * @property {?string} env
  */
 export default class DocumentTracerConfig {
     /**
@@ -27,7 +27,7 @@ export default class DocumentTracerConfig {
 export type DocumentTracerConfigInput = {
     key: string;
     secret: string;
-    domain?: string;
-    env?: string;
+    domain: string | null;
+    env: string | null;
 };
 //# sourceMappingURL=DocumentTracerConfig.d.ts.map

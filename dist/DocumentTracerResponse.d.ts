@@ -1,10 +1,10 @@
 /**
  * @typedef {Object} DocumentTracerResponseValueOf
- * @property {string} [_id]
- * @property {string} [applicationId]
- * @property {DocumentTracerError[]} [error]
+ * @property {?string} _id
+ * @property {?string} applicationId
+ * @property {?DocumentTracerError[]} error
  * @property {boolean} success
- * @property {Object} [data]
+ * @property {?Object} data
  */
 export default class DocumentTracerResponse {
     /**
@@ -39,10 +39,10 @@ export default class DocumentTracerResponse {
     #private;
 }
 export type DocumentTracerResponseValueOf = {
-    _id?: string;
-    applicationId?: string;
-    error?: DocumentTracerError[];
+    _id: string | null;
+    applicationId: string | null;
+    error: DocumentTracerError[] | null;
     success: boolean;
-    data?: any;
+    data: any | null;
 };
 //# sourceMappingURL=DocumentTracerResponse.d.ts.map

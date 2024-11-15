@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.2.2
+
+### Patch Changes
+
+- Type: fix thenable and application function params
+
 ## 2.2.1
 
 ### Patch Changes

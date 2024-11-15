@@ -1,6 +1,6 @@
 {
   "name": "@techlution-service/document-tracer",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Document Chaser SDK for NodeJS",
   "main": "index.js",
   "scripts": {

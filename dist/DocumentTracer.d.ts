@@ -1,4 +1,11 @@
-/** @typedef import('./DocumentTracerConfig.js').DocumentTracerConfigInput DocumentTracerConfigInput */
+/**
+ * @typedef import('./DocumentTracerConfig.js')
+ * .DocumentTracerConfigInput DocumentTracerConfigInput
+ */
+/**
+ * @typedef import('./DocumentTracerError/index.js')
+ * .DocumentTracerConfigError DocumentTracerConfigError
+ */
 /**
  * @typedef import('./DocumentTracerRequest/CreateApplicationRequest.js')
  * .CreateApplicationRequestInput CreateApplicationRequestInput
@@ -22,10 +29,11 @@ export default class DocumentTracer {
      */
     constructor(config: DocumentTracerConfig | DocumentTracerConfigInput);
     /**
-     * @params {string} [id]
+     * @function application
+     * @param {string} [id]
      * @return {DocumentTracer}
      */
-    application(id: any): DocumentTracer;
+    application(id?: string): DocumentTracer;
     /** @return {DocumentTracer} */
     orFail(): DocumentTracer;
     /**
@@ -34,20 +42,20 @@ export default class DocumentTracer {
      */
     verify(payload: any): boolean;
     /**
-     * @param {CreateApplicationRequest|CreateApplicationRequestInput} [input]
+     * @param {?CreateApplicationRequest|CreateApplicationRequestInput} input
      * @returns {DocumentTracer}
      */
-    create(input?: CreateApplicationRequest | CreateApplicationRequestInput): DocumentTracer;
+    create(input: (CreateApplicationRequest | CreateApplicationRequestInput) | null): DocumentTracer;
     /**
-     * @param {UpdateApplicationRequest|UpdateApplicationRequestInput} [input]
+     * @param {?UpdateApplicationRequest|UpdateApplicationRequestInput} input]
      * @returns {DocumentTracer}
      */
-    update(input?: UpdateApplicationRequest | UpdateApplicationRequestInput): DocumentTracer;
+    update(input: (UpdateApplicationRequest | UpdateApplicationRequestInput) | null): DocumentTracer;
     /**
-     * @param {DeleteApplicationRequest|DeleteApplicationRequestInput} [input]
+     * @param {?DeleteApplicationRequest|DeleteApplicationRequestInput} input
      * @returns {DocumentTracer}
      */
-    delete(input?: DeleteApplicationRequest | DeleteApplicationRequestInput): DocumentTracer;
+    delete(input: (DeleteApplicationRequest | DeleteApplicationRequestInput) | null): DocumentTracer;
     /** @type {?string} */
     get applicationId(): string;
     /** @type {?DocumentTracerError[]|DocumentTracerError} */
@@ -60,14 +68,29 @@ export default class DocumentTracer {
     get config(): string;
     /** @type {?string} */
     get request(): string;
-    /** @function then */
-    then(resolve: any, reject: any): Promise<any>;
+    /**
+     * @callback DocumentTracerResolve
+     * @param {DocumentTracerResponse} response
+     */
+    /**
+     * @callback DocumentTracerReject
+     * @param {DocumentTracerError} error
+     */
+    /**
+     * @function then
+     * @param {DocumentTracerResolve} resolve
+     * @param {DocumentTracerReject} reject
+     * @returns {DocumentTracerResolve|DocumentTracerRejcet}
+     */
+    then(resolve: (response: DocumentTracerResponse) => any, reject: (error: DocumentTracerError) => any): ((response: DocumentTracerResponse) => any) | DocumentTracerRejcet;
     #private;
 }
 /**
- * ('./DocumentTracerConfig.js').DocumentTracerConfigInput DocumentTracerConfigInput
+ * ('./DocumentTracerConfig.js')
+ * .DocumentTracerConfigInput DocumentTracerConfigInput
  */
 type _import = any;
 export { _import as import };
+import DocumentTracerResponse from './DocumentTracerResponse.js';
 import DocumentTracerConfig from './DocumentTracerConfig.js';
 //# sourceMappingURL=DocumentTracer.d.ts.map
