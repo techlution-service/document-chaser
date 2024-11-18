@@ -13,7 +13,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 var _DocumentTracerRequest_data, _DocumentTracerRequest_method;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.extractDefined = exports.parseRequiredInteger = exports.parseInteger = exports.Required = exports.TEMPLATE_TYPE_ENUM = exports.TEMPLATE_TYPE = exports.isNull = void 0;
-var util_1 = require("util");
+// import util from 'util';
 var index_js_1 = require("../DocumentTracerError/index.js");
 var isNull = function (input) { return typeof input === 'undefined' || input === null; };
 exports.isNull = isNull;
@@ -98,9 +98,7 @@ var DocumentTracerRequest = /** @class */ (function () {
             data: __classPrivateFieldGet(this, _DocumentTracerRequest_data, "f"),
         };
     };
-    DocumentTracerRequest.prototype[(_DocumentTracerRequest_data = new WeakMap(), _DocumentTracerRequest_method = new WeakMap(), util_1.default.inspect.custom)] = function () {
-        return this.valueOf();
-    };
     return DocumentTracerRequest;
 }());
+_DocumentTracerRequest_data = new WeakMap(), _DocumentTracerRequest_method = new WeakMap();
 exports.default = DocumentTracerRequest;

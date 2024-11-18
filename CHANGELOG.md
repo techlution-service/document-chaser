@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.3.0
+
+### Minor Changes
+
+- Chore: disable custom inspect function
+
 ## 2.2.6
 
 ### Patch Changes

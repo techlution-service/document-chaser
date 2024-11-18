@@ -48,7 +48,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 };
 var _DocumentTracerResponse_applicationId, _DocumentTracerResponse_error, _DocumentTracerResponse_success, _DocumentTracerResponse_data, _DocumentTracerResponse_errorMap;
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = require("util");
+// import util from 'util';
 var index_js_1 = require("./DocumentTracerError/index.js");
 /**
  * @typedef {Object} DocumentTracerResponseValueOf
@@ -173,9 +173,7 @@ var DocumentTracerResponse = /** @class */ (function () {
             data: __classPrivateFieldGet(this, _DocumentTracerResponse_data, "f"),
         };
     };
-    DocumentTracerResponse.prototype[(_DocumentTracerResponse_applicationId = new WeakMap(), _DocumentTracerResponse_error = new WeakMap(), _DocumentTracerResponse_success = new WeakMap(), _DocumentTracerResponse_data = new WeakMap(), _DocumentTracerResponse_errorMap = new WeakMap(), util_1.default.inspect.custom)] = function () {
-        return this.valueOf();
-    };
     return DocumentTracerResponse;
 }());
+_DocumentTracerResponse_applicationId = new WeakMap(), _DocumentTracerResponse_error = new WeakMap(), _DocumentTracerResponse_success = new WeakMap(), _DocumentTracerResponse_data = new WeakMap(), _DocumentTracerResponse_errorMap = new WeakMap();
 exports.default = DocumentTracerResponse;

@@ -59,7 +59,7 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
 };
 var _DocumentTracer_instances, _a, _DocumentTracer_applicationId, _DocumentTracer_config, _DocumentTracer_domain, _DocumentTracer_error, _DocumentTracer_key, _DocumentTracer_secret, _DocumentTracer_resource, _DocumentTracer_requestObject, _DocumentTracer_response, _DocumentTracer_result, _DocumentTracer_shouldFail, _DocumentTracer_url, _DocumentTracer_parseConfig, _DocumentTracer_exec, _DocumentTracer_formatUrl, _DocumentTracer_parseRequest, _DocumentTracer_request_get, _DocumentTracer_request_set;
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = require("util");
+// import util from 'util';
 var DocumentTracerConfig_js_1 = require("./DocumentTracerConfig.js");
 var index_js_1 = require("./DocumentTracerError/index.js");
 var index_js_2 = require("./DocumentTracerRequest/index.js");
@@ -184,44 +184,20 @@ var DocumentTracer = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
-    DocumentTracer.prototype[(_DocumentTracer_applicationId = new WeakMap(), _DocumentTracer_config = new WeakMap(), _DocumentTracer_domain = new WeakMap(), _DocumentTracer_error = new WeakMap(), _DocumentTracer_key = new WeakMap(), _DocumentTracer_secret = new WeakMap(), _DocumentTracer_resource = new WeakMap(), _DocumentTracer_requestObject = new WeakMap(), _DocumentTracer_response = new WeakMap(), _DocumentTracer_result = new WeakMap(), _DocumentTracer_shouldFail = new WeakMap(), _DocumentTracer_url = new WeakMap(), _DocumentTracer_instances = new WeakSet(), _DocumentTracer_parseConfig = function _DocumentTracer_parseConfig(input) {
-        if (input instanceof DocumentTracerConfig_js_1.default)
-            return input;
-        return new DocumentTracerConfig_js_1.default(input);
-    }, _DocumentTracer_exec = function _DocumentTracer_exec() {
-        if (!__classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get))
-            throw new index_js_1.RequestMalformed('Request content is not set');
-        var _b = __classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get), method = _b.method, body = _b.body;
-        __classPrivateFieldSet(this, _DocumentTracer_response, await DocumentTracerResponse_js_1.default.handleResponse(fetch(__classPrivateFieldGet(this, _DocumentTracer_url, "f"), { headers: (0, util_js_1.HEADER)(__classPrivateFieldGet(this, _DocumentTracer_key, "f")), method: method, body: body }), __classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get) instanceof index_js_2.CAR), "f");
-        var _c = __classPrivateFieldGet(this, _DocumentTracer_response, "f"), success = _c.success, responseId = _c.id, error = _c.error;
-        __classPrivateFieldSet(this, _DocumentTracer_result, success ? util_js_1.RESULT.SUCCESS : util_js_1.RESULT.FAIL, "f");
-        __classPrivateFieldSet(this, _DocumentTracer_applicationId, responseId, "f");
-        __classPrivateFieldSet(this, _DocumentTracer_error, error, "f");
-        if (__classPrivateFieldGet(this, _DocumentTracer_error, "f"))
-            throw error;
-    }, _DocumentTracer_formatUrl = function _DocumentTracer_formatUrl() {
-        return [__classPrivateFieldGet(this, _DocumentTracer_domain, "f"), 'admin', __classPrivateFieldGet(this, _DocumentTracer_resource, "f"), __classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get).constructor.checkId(__classPrivateFieldGet(this, _DocumentTracer_applicationId, "f"))]
-            .filter(Boolean).join('/');
-    }, _DocumentTracer_parseRequest = function _DocumentTracer_parseRequest(RequestClass, input) {
-        if (!__classPrivateFieldGet(this, _DocumentTracer_resource, "f"))
-            throw new index_js_1.RequestMalformed('Resource is not set');
-        __classPrivateFieldSet(this, _DocumentTracer_instances, input instanceof RequestClass ? input : new RequestClass(input), "a", _DocumentTracer_request_set);
-        return this;
-    }, _DocumentTracer_request_get = function _DocumentTracer_request_get() { return __classPrivateFieldGet(this, _DocumentTracer_requestObject, "f"); }, _DocumentTracer_request_set = function _DocumentTracer_request_set(input) {
-        __classPrivateFieldSet(this, _DocumentTracer_requestObject, input, "f");
-        __classPrivateFieldSet(this, _DocumentTracer_url, __classPrivateFieldGet(this, _DocumentTracer_instances, "m", _DocumentTracer_formatUrl).call(this), "f");
-    }, util_1.default.inspect.custom)] = function () {
-        return {
-            error: __classPrivateFieldGet(this, _DocumentTracer_error, "f"),
-            result: __classPrivateFieldGet(this, _DocumentTracer_result, "f"),
-            applicationId: __classPrivateFieldGet(this, _DocumentTracer_applicationId, "f"),
-            resource: __classPrivateFieldGet(this, _DocumentTracer_resource, "f"),
-            url: __classPrivateFieldGet(this, _DocumentTracer_url, "f"),
-            request: this.request,
-            response: __classPrivateFieldGet(this, _DocumentTracer_response, "f"),
-            config: __classPrivateFieldGet(this, _DocumentTracer_config, "f"),
-        };
-    };
+    /*
+    [util.inspect.custom]() {
+      return {
+        error: this.#error,
+        result: this.#result,
+        applicationId: this.#applicationId,
+        resource: this.#resource,
+        url: this.#url,
+        request: this.request,
+        response: this.#response,
+        config: this.#config,
+      };
+    }
+    */
     /**
      * @callback DocumentTracerResolve
      * @param {DocumentTracerResponse} response
@@ -259,5 +235,43 @@ var DocumentTracer = /** @class */ (function () {
     };
     return DocumentTracer;
 }());
-_a = DocumentTracer;
+_a = DocumentTracer, _DocumentTracer_applicationId = new WeakMap(), _DocumentTracer_config = new WeakMap(), _DocumentTracer_domain = new WeakMap(), _DocumentTracer_error = new WeakMap(), _DocumentTracer_key = new WeakMap(), _DocumentTracer_secret = new WeakMap(), _DocumentTracer_resource = new WeakMap(), _DocumentTracer_requestObject = new WeakMap(), _DocumentTracer_response = new WeakMap(), _DocumentTracer_result = new WeakMap(), _DocumentTracer_shouldFail = new WeakMap(), _DocumentTracer_url = new WeakMap(), _DocumentTracer_instances = new WeakSet(), _DocumentTracer_parseConfig = function _DocumentTracer_parseConfig(input) {
+    if (input instanceof DocumentTracerConfig_js_1.default)
+        return input;
+    return new DocumentTracerConfig_js_1.default(input);
+}, _DocumentTracer_exec = function _DocumentTracer_exec() {
+    return __awaiter(this, void 0, void 0, function () {
+        var _b, method, body, _c, _d, success, responseId, error;
+        return __generator(this, function (_e) {
+            switch (_e.label) {
+                case 0:
+                    if (!__classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get))
+                        throw new index_js_1.RequestMalformed('Request content is not set');
+                    _b = __classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get), method = _b.method, body = _b.body;
+                    _c = [this, _DocumentTracer_response];
+                    return [4 /*yield*/, DocumentTracerResponse_js_1.default.handleResponse(fetch(__classPrivateFieldGet(this, _DocumentTracer_url, "f"), { headers: (0, util_js_1.HEADER)(__classPrivateFieldGet(this, _DocumentTracer_key, "f")), method: method, body: body }), __classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get) instanceof index_js_2.CAR)];
+                case 1:
+                    __classPrivateFieldSet.apply(void 0, _c.concat([_e.sent(), "f"]));
+                    _d = __classPrivateFieldGet(this, _DocumentTracer_response, "f"), success = _d.success, responseId = _d.id, error = _d.error;
+                    __classPrivateFieldSet(this, _DocumentTracer_result, success ? util_js_1.RESULT.SUCCESS : util_js_1.RESULT.FAIL, "f");
+                    __classPrivateFieldSet(this, _DocumentTracer_applicationId, responseId, "f");
+                    __classPrivateFieldSet(this, _DocumentTracer_error, error, "f");
+                    if (__classPrivateFieldGet(this, _DocumentTracer_error, "f"))
+                        throw error;
+                    return [2 /*return*/];
+            }
+        });
+    });
+}, _DocumentTracer_formatUrl = function _DocumentTracer_formatUrl() {
+    return [__classPrivateFieldGet(this, _DocumentTracer_domain, "f"), 'admin', __classPrivateFieldGet(this, _DocumentTracer_resource, "f"), __classPrivateFieldGet(this, _DocumentTracer_instances, "a", _DocumentTracer_request_get).constructor.checkId(__classPrivateFieldGet(this, _DocumentTracer_applicationId, "f"))]
+        .filter(Boolean).join('/');
+}, _DocumentTracer_parseRequest = function _DocumentTracer_parseRequest(RequestClass, input) {
+    if (!__classPrivateFieldGet(this, _DocumentTracer_resource, "f"))
+        throw new index_js_1.RequestMalformed('Resource is not set');
+    __classPrivateFieldSet(this, _DocumentTracer_instances, input instanceof RequestClass ? input : new RequestClass(input), "a", _DocumentTracer_request_set);
+    return this;
+}, _DocumentTracer_request_get = function _DocumentTracer_request_get() { return __classPrivateFieldGet(this, _DocumentTracer_requestObject, "f"); }, _DocumentTracer_request_set = function _DocumentTracer_request_set(input) {
+    __classPrivateFieldSet(this, _DocumentTracer_requestObject, input, "f");
+    __classPrivateFieldSet(this, _DocumentTracer_url, __classPrivateFieldGet(this, _DocumentTracer_instances, "m", _DocumentTracer_formatUrl).call(this), "f");
+};
 exports.default = DocumentTracer;
