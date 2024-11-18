@@ -1,5 +1,11 @@
 # @techlution/document-tracer
 
+## 2.2.6
+
+### Patch Changes
+
+- Package: remove legacy config
+
 ## 2.2.5
 
 ### Patch Changes

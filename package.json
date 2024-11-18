@@ -1,13 +1,12 @@
 {
   "name": "@techlution-service/document-tracer",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Document Chaser SDK for NodeJS",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc"
   },
-  "type": "module",
   "engine": {
     "node": "^20.10.0"
   },
